@@ -1,0 +1,13 @@
+# Reference: https://build-cpp.github.io/cmkr/cmake-toml
+[project]
+name = "binary-ninja-cmkr"
+
+[fetch-content]
+binaryninja-api= { git = "https://github.com/Vector35/binaryninja-api"}
+
+[target.example]
+type = "shared"
+sources = ["src/*.cc", "include/*.hh"]
+include-directories = ["include"]
+compile-features = ["cxx_std_17"]
+link-libraries = ["binaryninjaapi"]
