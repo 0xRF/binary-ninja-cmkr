@@ -3,11 +3,10 @@
 name = "binary-ninja-cmkr"
 
 [fetch-content]
-binaryninja-api= { git = "https://github.com/Vector35/binaryninja-api"}
+binaryninja-api = { git = "https://github.com/Vector35/binaryninja-api", tag = "v03.02.03814" }
 
 [target.example]
 type = "shared"
-sources = ["src/*.cc", "include/*.hh"]
-include-directories = ["include"]
+sources = ["src/*.cc"]
 compile-features = ["cxx_std_17"]
 link-libraries = ["binaryninjaapi"]
